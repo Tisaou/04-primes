@@ -4,16 +4,19 @@ from math import sqrt
 
 
 def isprime(p):
-
-    # votre code ici
-
-    pass
+    """Renvois vrai si p est un nombre premier """
+    if p < 2:
+        return False
+    for d in range(2, int(sqrt(p)) + 1):
+        if p % d == 0:
+            return False
+    return True
 
 #### Fonction principale
 
 
 def main():
-
+    """Appel la fonction prime()"""
     # vos appels à la fonction secondaire ici
 
     for n in range(100):
